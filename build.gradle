@@ -1,0 +1,54 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'gradle-one-jar'
+
+version = '1.0'
+
+buildscript {
+    repositories {
+    	mavenCentral()
+	}
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.3'
+    }
+}
+
+task oneJar(type: OneJar) {
+    mainClass = 'com.porter.product.cassandra.CassandraPerformanceRunner'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'DMachine', 'Implementation-Version': 1.0
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'log4j', name: 'log4j', version: '1.2.9'
+	compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.3'
+
+	compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '2.0.8'
+	compile group: 'net.spy', name: 'spymemcached', version: '2.10.3'
+	compile group: 'redis.clients', name: 'jedis', version: '2.6.0'
+	compile group: 'com.couchbase.client', name: 'java-client', version: '2.0.1'
+	
+	compile group: 'com.aerospike', name: 'aerospike-client', version: '3.0.31'
+	
+	compile group: 'org.apache.avro', name: 'avro', version: '1.7.7'
+	
+	compile group: 'com.esotericsoftware', name: 'kryo-shaded', version: '3.0.0'
+	compile group: 'org.objenesis', name: 'objenesis', version: '2.1'
+	compile group: 'com.esotericsoftware.minlog', name: 'minlog', version: '1.2'
+	compile group: 'com.google.protobuf', name: 'protobuf-java', version: '2.6.0'
+	compile group: 'org.apache.thrift', name: 'libthrift', version: '0.9.0'
+	compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.7'
+	compile group: 'io.fastjson', name: 'boon', version: '0.30'
+	
+	testCompile group: 'junit', name: 'junit', version: '4.9'
+	testCompile group: 'org.mockito', name: 'mockito-core', version: '1.9.5'
+}
