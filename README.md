@@ -33,7 +33,7 @@ The folder runningFiles is meant to have all the required files for running this
 	- Id generation: How many different objects to be distributed?
 	- CRUD distribution: How many Create, Read, Update or Delete per run?
 	- Time test: Want to run a stress test? A quality test? Or just a performance test?
-	- Serialization: some are not implemented but the tools are theref
+	- Serialization: some are not implemented but the structure is there.
 
 ##Technologies used/considered
 
