@@ -7,9 +7,9 @@ This is POC to test in an easy and configurable way several Distributed Caching 
 ##Functionality
 
 ###Actors
-One Director machine
-One or More Client machines
-One or More Server machines
+- One Director machine
+- One or More Client machines
+- One or More Server machines
 
 ###Prerequisites
 - Basic knowledge and installation of each server node with the wanted technology
