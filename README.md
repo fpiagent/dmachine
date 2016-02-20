@@ -1,5 +1,5 @@
-# dmachine
-DMachine is a standalone component to test several distributed caching or no sql technologies.
+# DMachine
+DMachine (Distribution Machine / The Machine) is a standalone component to test several distributed caching or no sql technologies.
 
 ##Overview
 This is POC to test in an easy and configurable way several Distributed Caching tools.
